@@ -5,6 +5,10 @@
 - Can we use tags for automation of merges?
 -- maybe if there are no merge conflicts, but what if there are
 - Should we tag issues, even before they are worked on, as breaking changes?
+# Table of Contents
+**[Versioning Strategy](#versioning-strategy)**<br>
+**[Release Strategy](#release-strategy)**<br>
+**[Breaking Changes Guide](#breaking-changes-guide)**<br>
 
 # Versioning Strategy
 Once K8Dash releases version 1.0.0, it will use the following strategy.  Until then, breaking changes may occur without
