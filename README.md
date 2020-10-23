@@ -83,7 +83,7 @@ but ideally is considered in obvious cases.
 A new feature might be more CPU intensive or require caching that increases the Mem requirements.  Without this new
 minimum, K8dash might crash. Consider the following questions:
 
-- If pulling or presenting a list of N items, how will this change perform on large and active clusters
+- If pulling or presenting a list of N items, how will this change perform on large and active clusters?
 - If pulling a large dataset, even if only a few items, depending on the auto-refresh frequency and use frequency, this 
 could cause congestion even on a small cluster.
 - Any added caching might result in a need to increase the MEM minimum.
