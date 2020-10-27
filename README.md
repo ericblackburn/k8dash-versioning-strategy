@@ -17,7 +17,7 @@ Versions will use the `v<semantic version>` tag pattern.
 
 **Method**:
 1. Release current content in Stable branch as a Minor/Patch release
-2. Replace Stable branch content with everything from Master branch
+2. Replace Stable branch content with everything from Main branch
 3. Release updated Stable branch as a Major release
 
 ### Minor/Patch Release
@@ -27,22 +27,20 @@ Versions will use the `v<semantic version>` tag pattern.
 
 ## Branch and Merge Strategy
 ### Contribution workflow
-Contributor:
-1. Branch from Master
-2. Submit MR against Master
-
-Maintainer:
-1. Perform a code review and identify potential breaking changes
-   1. If there are [breaking changes](#breaking-changes-guide) , the MR might not be merged until the following [Major Release](#major-release).  
-   2. However, if backwards compatibility can be added to the change, attempt to remediate the breaking change before completing the merge to Master.
-   3. This project typically doesn't have breaking changes, so ideally this is rare.
-2. If the change is not a breaking change, merge to Stable.
+1. Contributor: Branch from Main
+2. Contributor: Submit MR against Main
+3. Maintainer Perform a code review and identify potential breaking changes
+   1. If there are [breaking changes](#breaking-changes-guide), the MR might not be merged until the following [Major Release](#major-release)
+   2. However, if backwards compatibility can be added to the change, attempt to remediate the breaking change before completing the merge to Main
+   3. This project typically doesn't have breaking changes, so ideally this is rare
+4. Maintainer: If the change is not a breaking change, merge to Stable
+5. Additional steps may be added in the future
 
 ### Strategy Reasoning
 - To support agile feature additions at a monthly pace, users of k8dash can expect 6 months of Stable updates on each Major version before 
 needing to review any breaking changes. Users can simply subscribe to a particular Major version and pull the latest 
 changes for that version without worry.
-- If users want to be on the cutting edge, they have the option of subscribing to the latest changes on the Master branch.
+- If users want to be on the cutting edge, they have the option of subscribing to the latest changes on the Main branch.
 - Helpful when needing to perform security patches for previous Major releases, fewer Major releases means less work.
 
 ## Breaking Changes Guide
@@ -85,7 +83,7 @@ but ideally is considered in obvious cases.
 A new feature might be more CPU intensive or require caching that increases memory requirements.  Without this new
 minimum, k8dash might crash. Consider the following:
 
-- How might the requested change impact the pserformance of pulling or presenting a list of N items on large and active clusters?
+- How might the requested change impact the performance of pulling or presenting a list of N items on large and active clusters?
    - Pulling a large dataset (even for a few items), depending on the auto-refresh frequency and use frequency, 
 could cause congestion, even on a small cluster
 - Any added caching might increase the minimum memory consumption
