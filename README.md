@@ -29,7 +29,7 @@ Versions will use the `v<semantic version>` tag pattern.
 ### Contribution workflow
 1. Contributor: Branch from Main
 2. Contributor: Submit MR against Main
-3. Maintainer Perform a code review and identify potential breaking changes
+3. Maintainer: Perform a code review and identify potential breaking changes
    1. If there are [breaking changes](#breaking-changes-guide), the MR might not be merged until the following [Major Release](#major-release)
    2. However, if backwards compatibility can be added to the change, attempt to remediate the breaking change before completing the merge to Main
    3. This project typically doesn't have breaking changes, so ideally this is rare
