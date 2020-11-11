@@ -2,7 +2,7 @@
 ## Table of Contents
 - **[Versioning Strategy](#versioning-strategy)**<br>
 - **[Release Strategy](#release-strategy)**<br>
-- **[Branch and Merge Strategy](#branch-and-merge-strategy)**<br>
+- **[Contribution Workflow](#contribution-workflow)**<br>
 - **[Breaking Changes Guide](#breaking-changes-guide)**<br>
 
 ## Versioning Strategy
@@ -25,25 +25,24 @@ Versions will use the `v<semantic version>` tag pattern.
 
 **Method**: Release Stable branch as a Minor/Patch release
 
-## Branch and Merge Strategy
-### Contribution workflow
-1. Contributor: [Fork](https://gist.github.com/Chaser324/ce0505fbed06b947d962#creating-a-fork) from Main
-2. Contributor: [Develop in your Fork](https://gist.github.com/Chaser324/ce0505fbed06b947d962#doing-your-work)
-3. Contributor: [Prep PR by cleaning up your work and merging updates from the upstream repo](https://gist.github.com/Chaser324/ce0505fbed06b947d962#cleaning-up-your-work)
-2. Contributor: [Submit PR](https://gist.github.com/Chaser324/ce0505fbed06b947d962#submitting) against Main
-3. Maintainer: Perform a code review and identify potential breaking changes
-   1. If there are [breaking changes](#breaking-changes-guide), the MR might not be merged until the following [Major Release](#major-release)
-   2. However, if backwards compatibility can be added to the change, attempt to remediate the breaking change before completing the merge to Main
-   3. This project typically doesn't have breaking changes, so ideally this is rare
-4. Maintainer: If the change is not a breaking change, merge to Stable
-5. Additional steps may be added in the future
-
 ### Strategy Reasoning
 - To support agile feature additions at a monthly pace, users of k8dash can expect 6 months of Stable updates on each Major version before 
 needing to review any breaking changes. Users can simply subscribe to a particular Major version and pull the latest 
 changes for that version without worry.
 - If users want to be on the cutting edge, they have the option of subscribing to the latest changes on the Main branch.
 - Helpful when needing to perform security patches for previous Major releases, fewer Major releases means less work.
+
+## Contribution Workflow
+1. Contributor: [Fork](https://gist.github.com/Chaser324/ce0505fbed06b947d962#creating-a-fork) from Main
+2. Contributor: [Develop in your Fork](https://gist.github.com/Chaser324/ce0505fbed06b947d962#doing-your-work)
+3. Contributor: [Prep PR by cleaning up your work and merging updates from the upstream repo](https://gist.github.com/Chaser324/ce0505fbed06b947d962#cleaning-up-your-work)
+4. Contributor: [Submit PR](https://gist.github.com/Chaser324/ce0505fbed06b947d962#submitting) against Main
+5. Maintainer: Perform a code review and identify potential breaking changes
+   1. If there are [breaking changes](#breaking-changes-guide), the PR might not be merged until the following [Major Release](#major-release)
+   2. However, if backwards compatibility can be added to the change, attempt to remediate the breaking change before completing the merge to Main
+   3. This project typically doesn't have breaking changes, so ideally this is rare
+6. Maintainer: If the change is not a breaking change, merge to Stable
+7. Additional steps may be added in the future
 
 ## Breaking Changes Guide
 ### In General, removing/changing any particular interface in a non-additive way
